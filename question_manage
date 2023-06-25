@@ -162,7 +162,7 @@
                                         </div>
                                         <div class="col-md-4 col-sm-12">
                                             <label class="control-label">Sub Category</label>
-                                            <select id="" name="subcategory" class="form-control">
+                                            <select id="edit_subcategory" name="subcategory" class="form-control" required>
                                                 <option value="">Select Sub Category</option>
                                             </select>
                                         </div>
@@ -558,6 +558,7 @@ foreach ($category as $cat) {
                     success: function (result) {
                         console.log(result);
                         $('#edit_subcategory').html(result);
+                        console.log( row_category + "<-- cat and sub_cat -->" + row_subcategroy)
                         if (category_id == row_category && row_subcategroy != 0){
                             console.log("test");
                             $('#edit_subcategory').val(row_subcategroy);
